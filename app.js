@@ -53,7 +53,7 @@ app.post('/sendMoney',(req,res) => {
 
     db.query("INSERT INTO transactions (sender,receiver,date,amount) VALUES (?,?,?,?)",[sender,receiver,date,amount],(err,result)=>{
         
-        // res.redirect('/');
+        res.redirect('/');
         
     })
      
@@ -65,7 +65,7 @@ app.post('/sendMoney',(req,res) => {
         
     })
     
-    res.json(req.body)
+    // res.json(req.body)
 });
 
 app.listen(port, () => console.log(`server started at port ${port}`));
