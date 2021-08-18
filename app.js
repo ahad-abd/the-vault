@@ -51,19 +51,21 @@ app.post('/sendMoney',(req,res) => {
     const {sender , receiver , amount } = req.body;
     const date = new Date();
 
-    db.query("INSERT INTO transactions (sender,receiver,date,amount) VALUES (?,?,?,?);",[sender,receiver,date,amount],(err,result)=>{
+    db.query("INSERT INTO transactions (sender,receiver,date,amount) VALUES (?,?,?,?)",[sender,receiver,date,amount],(err,result)=>{
         
-        res.redirect('/');
+        // res.redirect('/');
+        
     })
      
-    db.query("UPDATE users SET balance = (SELECT balance FROM users WHERE username = ?)-? WHERE username = ?;",[sender,amount,sender],(err,result)=>{
+    db.query("UPDATE `users` SET balance = (balance - ?) WHERE `username` LIKE ?",[amount,sender],(err,result)=>{
         
     })
 
-    db.query("UPDATE users SET balance = (SELECT balance FROM users WHERE username = ?)+? WHERE username = ?;",[receiver,amount,receiver],(err,result)=>{
+    db.query("UPDATE `users` SET balance = (balance - ?) WHERE `username` LIKE ?",[amount,receiver],(err,result)=>{
         
     })
-  
+    
+    res.json(req.body)
 });
 
-app.listen(port, () => console.log('app is running'));
+app.listen(port, () => console.log(`server started at port ${port}`));
