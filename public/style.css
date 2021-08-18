@@ -1,0 +1,360 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 10vh;
+  width: 90%;
+  margin: auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.logo-container {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+}
+
+.logo-container img {
+  height: 10vh;
+}
+
+nav {
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+}
+
+.nav-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  list-style: none;
+}
+
+.nav-link {
+  font-size: 18px;
+  font-weight: bold;
+  color: #838996;
+  text-decoration: none;
+}
+
+.presentation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 90%;
+  margin: auto;
+  min-height: 80vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.introduction {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.introduction .intro-text h1 {
+  font-size: 44px;
+  font-weight: 500;
+  background: -webkit-gradient(linear, left top, right top, from(#494964), to(#6f6f89));
+  background: linear-gradient(to right, #494964, #6f6f89);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.introduction .intro-text p {
+  margin-top: 5px;
+  font-size: 22px;
+}
+
+.cta {
+  padding: 50px 0px 0px 0px;
+}
+
+.cta .cta-transfer {
+  border: none;
+  height: 50px;
+  width: 150px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+  background: #3E79FF;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.cta .cta-transfer a {
+  text-decoration: none;
+  color: white;
+}
+
+.cover {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.cover img {
+  height: 75vh;
+}
+
+.btnTransfer {
+  border: none;
+  height: 50px;
+  width: 150px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+  background: #3E79FF;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.top_div {
+  width: 90vw;
+  margin: 30px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.top_div h2 {
+  color: #838996;
+}
+
+.table-container {
+  width: 90vw;
+  margin: 20px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.table-container table {
+  border-collapse: collapse;
+  -webkit-box-shadow: 0 5PX 10PX lightslategray;
+          box-shadow: 0 5PX 10PX lightslategray;
+  text-align: left;
+  overflow: hidden;
+}
+
+.table-container table thead {
+  -webkit-box-shadow: 0 5PX 10PX lightslategray;
+          box-shadow: 0 5PX 10PX lightslategray;
+}
+
+.table-container table th {
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+  font-weight: 900;
+}
+
+.table-container table td {
+  padding: 1rem 2rem;
+}
+
+.table-container table .balance {
+  text-align: right;
+  font-weight: 600;
+}
+
+.table-container table tr:nth-child(even) {
+  background-color: #e7eefc;
+}
+
+.modal-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: visibility 0s, opacity 0.5s;
+  transition: visibility 0s, opacity 0.5s;
+}
+
+.modal-bg .modal {
+  background-color: white;
+  height: 40%;
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.modal-bg .modal form {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.modal-bg .modal .inner-modal-div {
+  height: 75px;
+  width: 100%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.modal-bg .modal .sender-div {
+  position: relative;
+  overflow: hidden;
+}
+
+.modal-bg .modal .sender-div input {
+  margin-top: 12px;
+  width: 100%;
+  height: 100%;
+  color: #595f6e;
+  padding-top: 20px;
+  border: none;
+  outline: none;
+  font-size: 18px;
+}
+
+.modal-bg .modal .sender-div input:focus + .label-sender .sender-name,
+.modal-bg .modal .sender-div input:valid + .label-sender .sender-name {
+  -webkit-transform: translateY(-150%);
+          transform: translateY(-150%);
+  font-size: 14px;
+  color: #3E79FF;
+}
+
+.modal-bg .modal .sender-div input:focus + .label-sender::after,
+.modal-bg .modal .sender-div input:valid + .label-sender::after {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+}
+
+.modal-bg .modal .sender-div label {
+  position: absolute;
+  bottom: 0px;
+  left: 0%;
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+  border-bottom: 1px solid black;
+}
+
+.modal-bg .modal .sender-div label::after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  botttom: -1px;
+  height: 100%;
+  width: 100%;
+  border-bottom: 3px solid #3E79FF;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.modal-bg .modal .sender-div .sender-name {
+  position: absolute;
+  bottom: 5px;
+  left: 0px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.modal-bg .modal .input-amount {
+  padding: 5px;
+  font-size: 16px;
+  text-align: center;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid black;
+}
+
+.modal-bg .modal .modal-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 20px;
+  font-weight: bolder;
+  color: red;
+  cursor: pointer;
+}
+
+.modal-bg .modal .modal-close:hover {
+  color: black;
+}
+
+.modal-bg .modal button {
+  border: none;
+  height: 40px;
+  width: 110px;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 5px;
+  background: #3E79FF;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.bg-active {
+  visibility: visible;
+  opacity: 1;
+}
+/*# sourceMappingURL=style.css.map */
