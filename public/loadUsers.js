@@ -1,5 +1,5 @@
 // fetching users from database
-fetch('http://localhost:5000/getUsers')
+fetch('http://tsf-vault.herokuapp.com/getUsers')
      .then(res => res.json())
      .then(data => loadHTMLTable(data))
     

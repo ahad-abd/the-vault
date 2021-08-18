@@ -1,4 +1,4 @@
-fetch('http://localhost:5000/getTransactions')
+fetch('http://tsf-vault.herokuapp.com/getTransactions')
      .then(res => res.json())
      .then(data => loadHTMLTable(data))
     
