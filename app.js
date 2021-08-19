@@ -53,7 +53,7 @@ app.post('/sendMoney',(req,res) => {
 
     db.query("INSERT INTO transactions (sender,receiver,date,amount) VALUES (?,?,?,?)",[sender,receiver,date,amount],(err,result)=>{
         
-        res.redirect('/');
+        res.redirect('/users.html');
         
     })
      
@@ -61,7 +61,7 @@ app.post('/sendMoney',(req,res) => {
         
     })
 
-    db.query("UPDATE `users` SET balance = (balance - ?) WHERE `username` LIKE ?",[amount,receiver],(err,result)=>{
+    db.query("UPDATE `users` SET balance = (balance + ?) WHERE `username` LIKE ?",[amount,receiver],(err,result)=>{
         
     })
     
