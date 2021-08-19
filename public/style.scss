@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
 
 *{
@@ -39,6 +40,15 @@ nav{
     // color: #5f5f79;
     color: #838996;
     text-decoration: none;
+    padding:14px;
+   
+    &:hover{
+        color:black;
+    }
+}
+.active-tab{
+    border-bottom: 3.3px solid #3E79FF;
+    color:black;
 }
 .presentation{
     display: flex;
@@ -167,17 +177,41 @@ nav{
         background-color: white;
         height: 40%;
         width:50%;
+        border:2px solid #3E79FF;
+        border-radius: 10px;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
         position: relative;
+        h3{
+            margin-top:14px;
+            font-size: 30px;
+            font-family: 'Pacifico', cursive;
+            letter-spacing: 3px;
+        }
+
+        button{
+            margin-left:90px;
+        }
          form{
              flex:1;
              display: flex;
              flex-direction: column;
              justify-content: space-around;
+             align-items: center;
+             
          }
+         .form-bottom-div{
+             width:100%;
+            display: flex;
+            justify-content: space-between;
+
+            .btnSend{
+                margin-right: 100px;
+            }
+            
+        }
 
         .inner-modal-div{
             height:75px;
@@ -249,6 +283,7 @@ nav{
             font-size: 16px;
             text-align: center;
             outline:none;
+            width:156px;
             border:none;
             border-bottom:1px solid black;
         }
@@ -256,16 +291,19 @@ nav{
             position: absolute;
             top:15px;
             right:15px;
+            padding:0 4px;
             font-size: 20px;
             font-weight: bolder;
-            color:red;
+            color:black;
             cursor: pointer;
             &:hover{
-                color:black;
+                background-color: red;
+                color:rgb(255, 255, 255);
             }
         }
 
         button{
+        
         border: none;
         height: 40px;
         width : 110px;
@@ -283,3 +321,4 @@ nav{
     opacity:1;
     
 }
+

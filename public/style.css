@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
 * {
   margin: 0px;
   padding: 0px;
@@ -52,6 +53,16 @@ nav {
   font-weight: bold;
   color: #838996;
   text-decoration: none;
+  padding: 14px;
+}
+
+.nav-link:hover {
+  color: black;
+}
+
+.active-tab {
+  border-bottom: 3.3px solid #3E79FF;
+  color: black;
 }
 
 .presentation {
@@ -214,6 +225,8 @@ nav {
   background-color: white;
   height: 40%;
   width: 50%;
+  border: 2px solid #3E79FF;
+  border-radius: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -229,6 +242,17 @@ nav {
   position: relative;
 }
 
+.modal-bg .modal h3 {
+  margin-top: 14px;
+  font-size: 30px;
+  font-family: 'Pacifico', cursive;
+  letter-spacing: 3px;
+}
+
+.modal-bg .modal button {
+  margin-left: 90px;
+}
+
 .modal-bg .modal form {
   -webkit-box-flex: 1;
       -ms-flex: 1;
@@ -242,6 +266,23 @@ nav {
           flex-direction: column;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modal-bg .modal .form-bottom-div {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.modal-bg .modal .form-bottom-div .btnSend {
+  margin-right: 100px;
 }
 
 .modal-bg .modal .inner-modal-div {
@@ -323,6 +364,7 @@ nav {
   font-size: 16px;
   text-align: center;
   outline: none;
+  width: 156px;
   border: none;
   border-bottom: 1px solid black;
 }
@@ -331,14 +373,16 @@ nav {
   position: absolute;
   top: 15px;
   right: 15px;
+  padding: 0 4px;
   font-size: 20px;
   font-weight: bolder;
-  color: red;
+  color: black;
   cursor: pointer;
 }
 
 .modal-bg .modal .modal-close:hover {
-  color: black;
+  background-color: red;
+  color: white;
 }
 
 .modal-bg .modal button {

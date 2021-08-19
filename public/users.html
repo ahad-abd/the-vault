@@ -15,7 +15,7 @@
         <nav>
             <ul class="nav-links">
                 <li><a class="nav-link" href="index.html">Home</a></li>
-                <li><a class="nav-link" href="#">Users</a></li>
+                <li><a class="nav-link active-tab" href="#">Users</a></li>
                 <li><a class="nav-link" href="transactions.html">Transactions</a></li>
             </ul>
         </nav>
@@ -43,9 +43,9 @@
         </div>
         <div class="modal-bg">
             <div class="modal">
-                <h3>INSTANT MONEY TRANSFER</h3>
+                <h3>Instant Money Transfer</h3>
                 <form action="/sendMoney" method="POST">
-                <div class="inner-modal-div">
+                    <div class="inner-modal-div">
                     
                         <div class="sender-div">
                             <input type="text" name="sender" required>
@@ -60,10 +60,12 @@
                             </label>
                         </div>
                         
-                </div>
-                
-                    <input class="input-amount" type="number" placeholder="ENTER AMOUNT" name="amount" required>
-                    <button type="submit">SEND</button>
+                    </div>
+                    <div class="form-bottom-div">
+                        <input class="input-amount" type="number" placeholder="ENTER AMOUNT" name="amount" required>
+                        <button class="btnSend" type="submit">SEND</button>
+                    </div>
+                    
                 </form> 
                     
                 <span class="modal-close">X</span>
